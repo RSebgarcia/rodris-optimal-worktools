@@ -1,6 +1,6 @@
 ---
 name: bloop
-description: Intelligent build loop integrating ponytail + karpathy + mempalace. Clarify → implement minimum → verify → loop until done → capture to memory. Use when the user says "/build", "let's build X", "develop this idea", or "make X work".
+description: Intelligent build loop integrating ponytail + karpathy + mempalace. Clarify → implement minimum → verify → loop until done → capture to memory. Use when the user says "/bloop", "let's build X", "develop this idea", or "make X work".
 trigger: /bloop
 ---
 
