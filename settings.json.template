@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "mempalace": {
+      "command": "mempalace-mcp",
+      "args": ["--palace", "<YOUR_PALACE_PATH>"]
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "mempalace --palace \"<YOUR_PALACE_PATH>\" wake-up 2>/dev/null; exit 0",
+            "commandWindows": "if (Get-Command mempalace -ErrorAction SilentlyContinue) { mempalace --palace \"<YOUR_PALACE_PATH>\" wake-up }",
+            "timeout": 15,
+            "statusMessage": "MemPalace wake-up..."
+          }
+        ]
+      }
+    ]
+  }
+}
