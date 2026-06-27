@@ -1,0 +1,10 @@
+{
+  "name": "rodris-optimal-worktools",
+  "version": "1.0.0",
+  "description": "Product-focused Claude Code workflow. /bloop activates an intelligent build loop: clarify → implement minimum → verify → capture to memory.",
+  "author": {
+    "name": "RSebgarcia",
+    "url": "https://github.com/RSebgarcia"
+  },
+  "hooks": "./hooks/row-hooks.json"
+}

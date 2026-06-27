@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rodris-optimal-worktools",
+  "description": "Product-focused Claude Code workflow stack. Integrates ponytail + karpathy + mempalace into /bloop — an intelligent build loop that clarifies goals, builds minimum viable solutions, verifies results, and captures learnings.",
+  "owner": {
+    "name": "RSebgarcia",
+    "url": "https://github.com/RSebgarcia"
+  },
+  "plugins": [
+    {
+      "name": "rodris-optimal-worktools",
+      "description": "Intelligent build loop: /bloop [goal] → clarify → implement minimum → verify → capture to memory.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

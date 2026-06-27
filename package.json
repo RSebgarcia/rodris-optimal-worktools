@@ -1,0 +1,17 @@
+{
+  "name": "rodris-optimal-worktools",
+  "version": "1.0.0",
+  "description": "Product-focused Claude Code workflow. /bloop: clarify → implement minimum → verify → capture.",
+  "license": "MIT",
+  "author": {
+    "name": "RSebgarcia",
+    "url": "https://github.com/RSebgarcia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSebgarcia/rodris-optimal-worktools.git"
+  },
+  "pi": {
+    "skills": ["./skills"]
+  }
+}
