@@ -46,6 +46,22 @@ Mempalace: capture learnings for next session
 Ship. Polish later if needed.
 ```
 
+## Using `/bloop`
+
+`/bloop [goal]` is the core command — it activates the intelligent build loop.
+
+| Environment | How to invoke |
+|-------------|--------------|
+| **Desktop app** | Type `bloop [goal]` (no slash — desktop app doesn't support custom slash commands) |
+| **CLI terminal** | `/bloop [goal]` after installing the plugin (see below) |
+
+Both work identically. The slash is a UI affordance, not a behavior change.
+
+**CLI install:**
+```
+/plugin marketplace add RSebgarcia/rodris-optimal-worktools
+```
+
 ## Install
 
 See [setup/QUICKSTART.md](setup/QUICKSTART.md) — ~10 minutes, works on Windows, Mac, Linux.
