@@ -70,6 +70,36 @@ mempalace_add_drawer(wing="project-name", room="problem-type", content="verbatim
 - `room` = problem type (e.g. `auth-bugs`, `api-gotchas`, `deploy`)
 - Store the **symptom + solution**, not just the fix — so future searches by symptom find it.
 
+## 6. /build — Intelligent Build Loop
+
+Trigger: `/build [goal]`, "let's build X", "develop this idea", "make X work".
+
+Integrates ponytail + karpathy + mempalace into a 4-phase loop. Loops until the success criterion is met.
+
+**Phase 1 — CLARIFY**
+Before writing any code:
+1. State assumptions explicitly ("Assuming: (a) CSV input, (b) stdout output, (c) no UI")
+2. If ambiguous, ask ONE focused question — the one that unblocks the most.
+3. Define ONE verifiable success criterion: "This works when: [concrete, testable condition]"
+
+**Phase 2 — IMPLEMENT** (ponytail rules apply)
+Build the minimum that satisfies the criterion. Use the ponytail ladder — stop at the first rung that holds.
+Touch ONLY what the goal requires. No adjacent cleanup. No speculative features.
+
+**Phase 3 — VERIFY**
+Test against the Phase 1 criterion. Report clearly:
+- **PASS** → go to Phase 4
+- **FAIL** → state exactly what failed and why → loop back to Phase 2
+
+Max 3 iterations before surfacing: "Stuck after 3 attempts. Here's what I tried and where it fails: [summary]"
+
+**Phase 4 — DONE**
+On PASS:
+1. Capture to mempalace: `mempalace_add_drawer(wing="[project]", room="[type]", content="[what was built, criterion, gotchas]")`
+2. Report concisely: `[feature] → skipped: [X], add when [Y].`
+
+Show loop state to user: `BUILD LOOP — iteration 1/3 — [Phase]`
+
 ---
 
 *Stack: [ponytail](https://github.com/DietrichGebert/ponytail) + [mempalace](https://github.com/multica-ai/mempalace) + [karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)*
