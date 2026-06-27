@@ -70,9 +70,9 @@ mempalace_add_drawer(wing="project-name", room="problem-type", content="verbatim
 - `room` = problem type (e.g. `auth-bugs`, `api-gotchas`, `deploy`)
 - Store the **symptom + solution**, not just the fix — so future searches by symptom find it.
 
-## 6. /build — Intelligent Build Loop
+## 6. /bloop — Intelligent Build Loop
 
-Trigger: `/build [goal]`, "let's build X", "develop this idea", "make X work".
+Trigger: `/bloop [goal]`, "let's build X", "develop this idea", "make X work".
 
 Integrates ponytail + karpathy + mempalace into a 4-phase loop. Loops until the success criterion is met.
 
